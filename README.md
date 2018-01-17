@@ -10,4 +10,6 @@ $> yarn install
 $> node index.js
   OR
 $> node index.js https://web.bankin.com/challenge/index.html
+  OR
+$> docker build -t bankin-scrapping . && docker run --rm bankin-scrapping "https://web.bankin.com/challenge/index.html"
 ```

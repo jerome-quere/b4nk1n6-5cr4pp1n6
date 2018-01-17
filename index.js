@@ -50,7 +50,7 @@ const
     /**
      * The number of worker you want to start. Worker will fetch transaction concurrently
      */
-    WORKER_COUNT = 30
+    WORKER_COUNT = 20
 ;
 
 /**
@@ -146,7 +146,7 @@ class FetcherPool {
             Array(PAGE_COUNT).fill("").map((_, i) => this._addUrl(`${URL}?start=${i * PAGE_SIZE}`))
         );
 
-        // When we got all the transactions close the browser and return them.
+        // When we got all the transactions close all the pages, the browser and return them.
         await this.browser.close();
         return this.transactions;
     }

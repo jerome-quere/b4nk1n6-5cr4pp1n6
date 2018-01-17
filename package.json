@@ -4,5 +4,6 @@
   "license": "MIT",
   "dependencies": {
     "puppeteer": "^1.0.0"
-  }
+  },
+  "engines" : { "node" : ">= 8" }
 }
